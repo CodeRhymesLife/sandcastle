@@ -8,7 +8,7 @@
         {
             "name" : "Scene",
             "nodes" : [
-                0
+                2
             ]
         }
     ],
@@ -16,6 +16,28 @@
         {
             "mesh" : 0,
             "name" : "Object_0"
+        },
+        {
+            "mesh" : 1,
+            "name" : "Object_0.001",
+            "rotation" : [
+                0,
+                0.7071068286895752,
+                0,
+                0.7071067094802856
+            ],
+            "translation" : [
+                1.0499941110610962,
+                0,
+                0
+            ]
+        },
+        {
+            "children" : [
+                0,
+                1
+            ],
+            "name" : "Office"
         }
     ],
     "materials" : [
@@ -60,6 +82,20 @@
                         "TEXCOORD_0" : 9
                     },
                     "indices" : 10,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Mesh_0.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 11,
+                        "NORMAL" : 12,
+                        "TEXCOORD_0" : 13
+                    },
+                    "indices" : 14,
                     "material" : 0
                 }
             ]
@@ -173,6 +209,40 @@
             "componentType" : 5123,
             "count" : 46608,
             "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5126,
+            "count" : 6483,
+            "max" : [
+                0.23558826744556427,
+                1.0270881652832031,
+                0.36334970593452454
+            ],
+            "min" : [
+                -0.20242099463939667,
+                -0.035647034645080566,
+                -0.22713439166545868
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 12,
+            "componentType" : 5126,
+            "count" : 6483,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 13,
+            "componentType" : 5126,
+            "count" : 6483,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 14,
+            "componentType" : 5123,
+            "count" : 6483,
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
@@ -230,11 +300,31 @@
             "buffer" : 0,
             "byteLength" : 93216,
             "byteOffset" : 5816768
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 77796,
+            "byteOffset" : 5909984
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 77796,
+            "byteOffset" : 5987780
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 51864,
+            "byteOffset" : 6065576
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12966,
+            "byteOffset" : 6117440
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 5909984,
+            "byteLength" : 6130408,
             "uri" : "ryans-home-office.bin"
         }
     ]
