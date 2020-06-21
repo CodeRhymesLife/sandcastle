@@ -10,7 +10,7 @@ module.exports = merge(common, {
     devServer: {
         contentBase: APP_DIR,
         // writeToDisk: true,
-        host: '0.0.0.0',
+        // host: '0.0.0.0',
         // disableHostCheck: true
         port: 1234,
     }
