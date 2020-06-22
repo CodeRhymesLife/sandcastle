@@ -10,9 +10,9 @@ import { XRInput } from "../../engine/xrinput";
 import { State } from "../../engine/state";
 import { PeerConnection } from '../../engine/networking/PeerConnection'
 
-const GLTFOffice = require("./assets/models/foundry/foundry-upstairs.gltf");
-const GLTFOfficeBin = require("./assets/models/foundry/foundry-upstairs.bin");
-const GLTFOfficePng = require("./assets/models/foundry/foundry-upstairs.png");
+const GLTFOffice = require("./assets/models/office/ryans-home-office.gltf");
+const GLTFOfficeBin = require("./assets/models/office/ryans-home-office.bin");
+const GLTFOfficePng = require("./assets/models/office/ryans-home-office.png");
 
 export const scene = new Scene();
 //const networking = new PeerConnection(scene);
@@ -32,7 +32,7 @@ scene.init = () =>
         // it thinks it is in the directory as the gltf file (i.e. /assets/models/)
         // However, in webpack.common.js we put images in /assets/images
         // so we need to point the image at the appropriate path
-        if (uri.includes("foundry-upstairs.png"))
+        if (uri.includes("ryans-home-office.png"))
         {
             uri = GLTFOfficePng
         }
