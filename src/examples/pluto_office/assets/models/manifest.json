@@ -1,0 +1,16 @@
+{
+  "name": "Pluto office",
+  "description": "A model of the Pluto office",
+  "xr_type": "gltf@0.0.1",
+  "start_url": "pluto.glb",
+  "icons": [
+    {
+      "src": "icon.gif",
+      "type": "image/gif" // screen capture
+    },
+    {
+      "src": "pluto.glb",
+      "type": "model/gltf-binary" // gltf preview
+    }
+  ]
+}
