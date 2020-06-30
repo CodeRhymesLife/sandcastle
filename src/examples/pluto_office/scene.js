@@ -5,10 +5,12 @@
 import { AmbientLight, AnimationMixer, Clock, LoadingManager, LoopOnce, Scene, Color, Mesh, Plane, DoubleSide, SphereBufferGeometry, PlaneBufferGeometry, MeshBasicMaterial, MeshNormalMaterial, MeshPhongMaterial, Object3D, HemisphereLight, DirectionalLight, SpotLight, ShaderMaterial, AdditiveBlending, BufferGeometry, TextureLoader, Float32BufferAttribute, Points, DynamicDrawUsage, Vector3, MixOperation } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import XRInput from "../../engine/xrinput";
+import PeerConnection from "../../engine/networking/PeerConnection";
 
 const GLTFPlutoOffice = require("./assets/models/pluto.glb");
 
 export const scene = new Scene();
+const networking = new PeerConnection(scene);
 
 scene.init = () =>
 {
@@ -43,11 +45,22 @@ scene.init = () =>
         spinnerAnimation.loop = false;
     });
 
-    XRInput.onSelect = e => {
+    var playSpinnerAnimation = () => {
         if (spinnerAnimation) {
             console.log("Playing spinner animation");
             spinnerAnimation.play();
         }
+    }
+
+    XRInput.onSelect = e => {
+        playSpinnerAnimation();
     };
+    
+    networking.remoteSync.addEventListener("spin", e => {
+    
+    });
 }
+
+
+
 scene.init();
